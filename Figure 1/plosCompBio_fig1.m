@@ -134,14 +134,6 @@ coordsOrg2 = handles.orgCoords;
 [in] = inpolygon(coordsOrg2(:,1),coordsOrg2(:,2),posCell(:,1),posCell(:,2));
 
 coordsOrg = coordsOrg2(find(in==1),1:2);
-% LysoIndices = int64(sub2ind(size(BW_cellBdry),round(coordsOrg2(:,2)),round(coordsOrg2(:,1))));
-% val = find(BW_cellBdry(LysoIndices)==1);
-% coordsOrg = [coordsOrg2(val,1), coordsOrg2(val,2)];
-
-% axes(handles.axes1)
-% hold on
-% scatter(coordsOrg(:,1),coordsOrg(:,2),'b.')
-
 
 %Inside the cell mask
 handles.orgCoordsIn = coordsOrg;
@@ -173,10 +165,6 @@ function pushbuttonLoadCoordstxt_Callback(hObject, eventdata, handles)
 coordsOrg = csvread(strcat(path,filename));
 handles.orgCoords = coordsOrg;
 
-% axes(handles.axes1)
-% hold on
-% scatter(coordsOrg(:,1),coordsOrg(:,2),'b.')
-
 guidata(hObject,handles)
 
 % --- Executes on button press in pushbuttonLoadCoordsxls.
@@ -191,11 +179,6 @@ function pushbuttonInterEvent_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbuttonInterEvent (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
-% %Setting all other calls to empty status
-% set(handles.pushbuttonNearestNeighbor, 'userdata', [])
-% set(handles.pushbuttonOrgNuc, 'userdata', [])
-% set(handles.pushbuttonOrgNucPeriphery, 'userdata',[])
 
 axes(handles.axes2)
 hold on
@@ -223,24 +206,6 @@ IEDist = pdist(OrgCoordsIn, 'euclidean'); % Inter event distance
 [f,xi] = ksdensity(IEDist/max(IEDist));
 plot(xi,f)
 hold on
-
-%Randomize - pick 'n' pixels for placing Lysosomes - Perform it 100 times
-% for iter = 1:10
-% 
-%     [y] = datasample(pixelsInCell,num_Lyso,'Replace',false);
-%     %csvwrite(sprintf('randomOrgCoords%0.1d.txt',iter),y);
-%     csvwrite('randomOrgCoords.txt',y);
-%     
-%     %Call the graded perinuclear function
-%     IEDist = pdist(y, 'euclidean'); % Inter event distance 
-%     [f,xi] = ksdensity(IEDist*pixelSize/max(IEDist));
-%     plot(xi,f,'r')
-%     hold on    
-%     
-% end 
-
-% legend('Sample','Randomized')
-
 
 calls = get(handles.pushbuttonInterEvent, 'userdata');
 if isempty(calls)
@@ -343,50 +308,12 @@ plot(xi,f)
 xlabel('Lyso-Nuc-Cell distance distribution (in %)')
 ylabel('Probability')
 
-
-
-% %Randomize - pick 'n' pixels for placing Lysosomes - Perform it 100 times
-% for iter = 1:10
-%     
-%     cd 7_Oct_16' (GUIDE)'\
-% 
-%     [y] = datasample(pixelsInCell,num_Lyso,'Replace',false);
-%     %csvwrite(sprintf('randomOrgCoords%0.1d.txt',iter),y);
-%     csvwrite('randomOrgCoords.txt',y);
-% 
-% 
-%     %Call the graded perinuclear function
-%     [minDistLysoNuc, minDistLysoCell, ArCell] = OrgNuc(posCell, posNuc, y);
-%     [f,xi] = ksdensity((minDistLysoNuc*pixelSize)/(ArCell*pixelSize^2));
-%     axes(handles.axes5)
-%     hold on
-%     plot(xi,f,'r')
-%     xlabel('Normalized Lyso-Nuc Distance Distribution (in um^{-1})')
-%     ylabel('Probability')
-% 
-%     [f,xi] = ksdensity((minDistLysoNuc./(minDistLysoNuc+minDistLysoCell))*100);
-%     axes(handles.axes4)
-%     hold on
-%     plot(xi,f,'r')
-%     xlabel('Lyso-Nuc-Cell distance distribution (in %)')
-%     ylabel('Probability')
-% 
-% end
-
 calls = get(handles.pushbuttonOrgNuc, 'userdata');
 if isempty(calls)
     calls = 1;
 else
     calls = calls + 1;
 end
-
-% handles.minDistLysoNuc{calls} = minDistLysoNuc;
-% handles.minDistLysoCell{calls} = minDistLysoCell;
-% handles.ArCell{calls} = ArCell;
-
-% LysoNucMD{calls} = handles.minDistLysoNuc
-% LysoCellMD{calls} = handles.minDistLysoCell
-% ArCell_final{calls} = handles.ArCell
 
 LysoNucMD{calls} = minDistLysoNuc;
 LysoCellMD{calls} = minDistLysoCell;
