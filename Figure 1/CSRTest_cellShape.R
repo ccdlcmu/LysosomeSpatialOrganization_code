@@ -4,6 +4,7 @@
 #args <- commandArgs(trailingOnly = T)
 ca = commandArgs(TRUE)
 arg1 = ca[1]
+#arg2 = ca[2]
 #dirFolder <- args[1]
 #print(ca)
 #dirFolder = "df"
@@ -12,7 +13,11 @@ arg1 = ca[1]
 
 
 print(getwd())
+print("argument list")
+print (ca)
+print (strtoi(arg1))
 
+arg1 = strtoi(arg1)
 setwd("C:/Users/GuruprasadR/Desktop/Box Sync/Fall'16 Research/14_Oct_16 (Ripley's K - arbit shape)")
 library(spatstat)
 
@@ -20,7 +25,7 @@ convCell= read.csv('convCell.txt', header=FALSE)
 convNuc = read.csv('convNuc.txt', header=FALSE)
 coordsOrg = read.csv('OrgCoordsInCell.txt', header=FALSE)
 
-convCell[,2] = 1040 - convCell[,2];
+convCell[,2] = arg1 - convCell[,2];
 convCell[,1] = rev(convCell[,1]);
 convCell[,2] = rev(convCell[,2]);
 
@@ -28,7 +33,7 @@ cell <- owin(poly=list(x=convCell$V1, y=convCell$V2))
 
 #cellwoNuc <- owin(poly=list(list(x=convCell$V1, y=convCell$V2), list(x=convNuc$v1, y=convNuc$V2)))
 
-coordsOrg$V2 = 1040 - coordsOrg$V2;
+coordsOrg$V2 = arg1 - coordsOrg$V2;
 
 lyso <- ppp(coordsOrg$V1,coordsOrg$V2,window=cell)
 
