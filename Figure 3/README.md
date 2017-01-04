@@ -1,5 +1,5 @@
 # Figure 3
-This folder contains all scripts used for generating data for figure-3
+#### This folder contains all scripts used for generating data for figure-3
 1. Converting .xml files to coords_x & coords_y (single particle trajectory files)
 2. Evaluate mean-square-displacement (msd) for each particle trajectory and classify the trajectories into free diffusion, confined diffusion and directed motion
 
