@@ -3,6 +3,7 @@ This folder contains all scripts used for generating data for figure-1, which fo
 ### 1. Selecting Characteristic images
 ### 2. Evaluating Spatial statistical metrics
 ### 3. Calculating Ripley's K/L statistic for arbitrary cell shapes
+### 4. Evaluating Bhattacharyya distances between probability distributions
 
 ## 1. Selecting characteristic images
 characteristicImages: This script can be run to produce images of cells with their boundary and nucleus segmented (manually)
@@ -20,13 +21,16 @@ plosCompBio_fig1 : This GUI based script allows you to import an image, detected
 4. Click the trace nucleus button and trace the nucleus of the cell
 5. Click the buttons (any 4 metrics) to plot and save the metric. 
 
-## 3. Calculating Ripley's K/L statistic for arbitrary cell shapes
+## 3. Calculating Ripley's K/L statistic for arbitrary cell shapes:
 ripleysK_arbitShape: This script takes the DAPI, DIC, organelle channel and the points detected (organelle positions) as the input and generates a homogenous poisson point process within the arbitrarily shaped cell. 
 
 ### Instructions
 1. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes to evaluate the Ripley's K/L function. 
 
+## 4. Evaluating Bhattacharyya distances between probability distributions:
+bhattacharyyaDist_Metric: This script can be used to evaluate the bhattacharyya distance between probability distributions
 
-
-
+### Instructions
+1. Run bhattacharyyaDist_Metric.m with any one of these numbers(1,2,3,4) as the input. The numbers correspond to the metric being chosen. 
+2. The program will output the list of bhattacharyya distances between every pair of probability distributions along with the mean and standard deviation of these distances (further required for statistical tests) 
 
