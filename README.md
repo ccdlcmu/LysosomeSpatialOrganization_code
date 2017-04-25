@@ -1,5 +1,5 @@
-# TransportPatternPaper
-This repo contains all scripts/code used for the paper titled " Paper title " submitted to " Journal Name "
+# Deciphering Organelle Positioning and Dynamics
+This repo contains all scripts/code used for the paper titled " Cell-scale dynamic organization of lysosomes revealed by spatial statistical analysis " submitted to " Journal Name "
 
 ## Folders
 ### 1. Quantify Organelle Spatial distribution (Organelles)
