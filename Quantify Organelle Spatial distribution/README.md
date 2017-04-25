@@ -13,7 +13,7 @@ Scripts
      i. Ripley's K/L v/s neighborhood radius(r)
 
    Instructions
-     a. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes to evaluate the 	Ripley's K/L function. 
+     a. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes
 ```
 ### 2. Evaluating the spatial statistical metrics: 
 ```
