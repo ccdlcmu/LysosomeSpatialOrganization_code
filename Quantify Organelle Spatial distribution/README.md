@@ -13,7 +13,7 @@ Scripts
      i. Ripley's K/L v/s neighborhood radius(r)
 
    Instructions
-     a. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes
+     a. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes.
 ```
 ### 2. Evaluating the spatial statistical metrics: 
 ```
@@ -29,7 +29,7 @@ Scripts
    
    Instructions
      a. Run the plosCompbio_fig1 
-     b. Click the Load Image button and import the DIC, organelle, DAPI channel and the points 				detected text file.
+     b. Click the Load Image button and import the DIC, organelle, DAPI channel and the points detected text file.
      c. Click the trace cell button and trace the boundary of the cell
      d. Click the trace nucleus button and trace the nucleus of the cell
      e. Click the buttons (any 4 metrics) to plot and save the metric. 
