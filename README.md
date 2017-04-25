@@ -26,12 +26,13 @@ Organelle dynamics are quantified via:
 	i. Active Transport
 	ii. Brownian Diffusion
 	iii. Confined Diffusion
-'''
+```
 ### 4. Spatial clusters 
 ### 5. Organelle Spatial gradient
 ```
 Spatial gradients a
 ```
+
 ### 6. Spatial gradient of diffusion constants
 ```
 ```
