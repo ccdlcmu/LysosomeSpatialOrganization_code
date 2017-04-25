@@ -1,18 +1,18 @@
 # Quantify Organelle Spatial distribution 
 The Ripley's K/L test can be used to test whether the spatial positioning of organelles is purely random; Having proved that their distribution is not random, 3 spatial metrics have been developed to quantify the same within a cell along time and across cells. 
 
-## 1. Calculating Ripley's K/L statistic for arbitrary cell shapes:
+### 1. Calculating Ripley's K/L statistic for arbitrary cell shapes:
 ```
-ripleysK_arbitShape: This script takes the DAPI, DIC, organelle channel and the points detected (organelle positions) as the input and generates a homogenous poisson point process within the arbitrarily shaped cell. 
+**ripleysK_arbitShape**: This script takes the DAPI, DIC, organelle channel and the points detected (organelle positions) as the input and generates a homogenous poisson point process within the arbitrarily shaped cell. 
 
-### Instructions
+Instructions
 1. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes to evaluate the Ripley's K/L function. 
 ```
-## 2. Evaluating the spatial statistical metrics: 
+### 2. Evaluating the spatial statistical metrics: 
 ```
-plosCompBio_fig1 : This GUI based script allows you to import an image, detected positions and evaluate the 4 metrics; 
+**plosCompBio_fig1** : This GUI based script allows you to import an image, detected positions and evaluates the 3 metrics; 
 
-### Instructions
+Instructions
 1. Run the plosCompbio_fig1 
 2. Click the Load Image button and import the DIC, organelle, DAPI channel and the points detected text file.
 3. Click the trace cell button and trace the boundary of the cell
