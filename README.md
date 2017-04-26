@@ -2,7 +2,7 @@
 This repo contains all scripts/code used for the paper titled " Cell-scale dynamic organization of lysosomes revealed by spatial statistical analysis " submitted to " Journal Name "
 
 ## Folders
-### 1. Quantify Organelle Spatial distribution (Organelles)
+### 1. Quantify Organelle Spatial distribution 
 ```
 The scripts for the following analysis are present:
  1. Ripley's K/L test (for checking spatial randomness)
