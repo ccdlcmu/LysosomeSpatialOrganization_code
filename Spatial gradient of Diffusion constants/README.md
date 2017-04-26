@@ -10,14 +10,34 @@ Instructions
 a. Run diffusionHeatMap.m with inputs as illustrated in Demo_data folder and obtain weighted scattered plot
 ```
 
-### 2. Mean-square displacement (MSD) and classification into 3 modes of motion {free diffusion, confined diffusion and active transport}
+### 2. Quantify the range of diffusion constants with increasing distance from the nucleus
 ```
 Scripts
-1. MeanSqDisp.m : MATLAB script to calculate mean-square-displacement and classify trajectories into 3 modes of transport
-2. plotloglogMSD.m : MATLAB script to plot loglogMSD wrt mode of transport
-3. plotTrackswMode.m : MATLAB script to plot tracks wrt mode of transport
-4. plotMSDwMode.m : MATLAB script to plot MSD wrt mode of transport
- 
+1. spatialGradient_diffusionConstants.m: 
+   Input: 
+     i. .mat files present in Demo_data
+   
+   Output:
+     i. Diffusion constants of organelles present in cell as a function of distance from nucleus\
+    ii. Regex of mat file output => "*lysoDiff*t.mat"
+
+2. diffusion_rings.m: 
+   Input:
+     i. .mat file present as regex (*Diff*t.mat*)
+
+   Output:
+     i. Diffusion constants of organelles in unique rings 
+    ii. Regex of mat file output => "Diff*_Cell*.mat"
+
+3. Plot_diffRings.m: 
+   Input:
+     i. .mat file present as regex ("Diff*_Cell*.mat)
+    
+   Output:
+     i. box plot depicting range of diffusion constants with increasing "nuclear" distance
+
 Instructions
-a. Run MATLAB script to compute mean-square-displacement, to classify the mode of trajectory and plot trajectories, loglogMSD and MSD wrt time-lags. "MeansSqDisp(filename, orgName)"
+a. Run spatialGradient_diffusionConstants.m; Once all mat files have been created, move to step b.
+b. Run diffusion_rings.m; 
+c. Once mat files from 'b' are created, run 'Plot_diffRings.m" to get a box plot
 ```
