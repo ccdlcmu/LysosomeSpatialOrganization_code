@@ -1,4 +1,4 @@
-#Quantify Organelle Dynamics
+# Quantify Organelle Dynamics
 The organelle dynamics are quantified by performing Single Particle tracking (on Icy bioimage analysis) followed by computing the mean-squared displacement of each of the trajectories used for classifying the trajectories into their 3 modes of motion.
 
 ### 1. Convert .xml files to .txt 
