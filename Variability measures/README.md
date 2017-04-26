@@ -13,8 +13,17 @@ Scripts
     ii. areaOverlap_NN: Area overlap distance between Nearest-neighbor distribution along time within a single cell 
    iii. areaOverlap_OrgNuc: Area overlap distance between normalized distance to nucleus along time within a single cell
 
+2. boxPlot_areaOverlapDist:
+   Inputs:
+     i. MS Excel file name that contains all the distance values
+    ii. Sheet name (within excel file) that contains the distance measures
+
+   Outputs:
+     i. Box plots
+
    Instructions
-     a. Run ripleysK_arbitShape.m and follow the instructions specified in message boxes
+     a. Run calculateAreaOverlapDist and store all the distance measures in an excel file.
+     b. Pass the excel & sheet name as parameters to boxPlot_areaOverlapDist to get boxplots.
 ```
 ### 2. Euclidean Distance: 
 ```
@@ -29,12 +38,17 @@ Scripts
     ii. Eucliddist_NN: Euclidean distance between Nearest-neighbor distribution along time within a single cell
    iii. Eucliddist_OrgNuc: Euclidean distance between normalized distance to nucleus along time within a single cell
    
+2. boxPlot_EuclidDist:
+   Inputs:
+     i. MS Excel file name that contains all the distance values
+    ii. Sheet name (within excel file) that contains the distance measures
+
+   Outputs:
+     i. Box plots
+
    Instructions
-     a. Run the plosCompbio_fig1 
-     b. Click the Load Image button and import the DIC, organelle, DAPI channel and the points 				detected text file.
-     c. Click the trace cell button and trace the boundary of the cell
-     d. Click the trace nucleus button and trace the nucleus of the cell
-     e. Click the buttons (any 4 metrics) to plot and save the metric. 
+     a. Run calculateEuclidDist and store all the distance measures in an excel file.
+     b. Pass the excel & sheet name as parameters to boxPlot_EuclidDist to get boxplots.
 ```
 
 ### 3. Bhattacharyya Distance
@@ -50,12 +64,17 @@ Scripts
     ii. BCdist_NN: Bhattacharyya distance between Nearest-neighbor distribution along time within a single cell
    iii. BCdist_OrgNuc: Bhattacharyya distance between normalized distance to nucleus along time within a single cell
    
+2. boxPlot_BCDist:
+   Inputs:
+     i. MS Excel file name that contains all the distance values
+    ii. Sheet name (within excel file) that contains the distance measures
+
+   Outputs:
+     i. Box plots
+
    Instructions
-     a. Run the plosCompbio_fig1 
-     b. Click the Load Image button and import the DIC, organelle, DAPI channel and the points 				detected text file.
-     c. Click the trace cell button and trace the boundary of the cell
-     d. Click the trace nucleus button and trace the nucleus of the cell
-     e. Click the buttons (any 4 metrics) to plot and save the metric. 
+     a. Run calculateBCDist and store all the distance measures in an excel file.
+     b. Pass the excel & sheet name as parameters to boxPlot_BCDist to get boxplots.
 ```
 
 
