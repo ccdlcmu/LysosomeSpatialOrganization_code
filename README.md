@@ -30,11 +30,12 @@ Organelle dynamics are quantified via:
 ### 4. Spatial clusters 
 ### 5. Organelle Spatial gradient
 ```
-Spatial gradients a
+Spatial gradients 
 ```
 
 ### 6. Spatial gradient of diffusion constants
 ```
+The diffusion constants of lysosomes is determined and analyzed as a function of distance (r) from the nucleus with the aim of discovering interesting trends, if any.
 ```
 
 ## Authors
