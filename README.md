@@ -1,5 +1,5 @@
 # Deciphering Organelle Positioning and Dynamics
-This repo contains all scripts/code used for the paper titled " Cell-scale dynamic organization of lysosomes revealed by spatial statistical analysis " submitted to " Journal Name "
+This repo contains all scripts/code used for the paper titled " Whole-cell scale dynamic organization of lysosomes revealed by spatial statistical analysis " submitted to " Cell Reports "
 
 ## Folders
 ### 1. Quantify Organelle Spatial distribution 
@@ -27,20 +27,8 @@ Organelle dynamics are quantified via:
 	ii. Brownian Diffusion
 	iii. Confined Diffusion
 ```
-### 4. Spatial clusters 
-### 5. Organelle Spatial gradient
-```
-Spatial gradients of organelles are quantified for the following reasons:
-1. Compare spatial profile of multiple organelles simultaneously within a cell
-2. Compare spatial gradient of organelles at different cell states.
-```
+### 4. Micellaneous
 
-### 6. Spatial gradient of diffusion constants
-```
-This folder helps pursue the following analysis:
- 1. Evaluation of diffusion constants of all trajectories
- 2. Discover trends in diffusion constants v.s distance from the nucleus (r)
-```
 
 ## Authors
 * **Guruprasad Raghavan** 
