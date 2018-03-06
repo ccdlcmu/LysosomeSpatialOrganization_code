@@ -1,1 +1,6 @@
 
+orgSpatStat is a MATLAB user interface for analyzing organelle spatial distribution.
+
+Future release will incorporate spatial clustering and organelle motility analysis.
+
+To start, simply open "orgSpatStat.mat" and run.
